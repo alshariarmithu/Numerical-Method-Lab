@@ -1,11 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define fastIO ios_base::sync_with_stdio(false);cin.tie(NULL)
 #define TOL 1e-6
 
 int main()
 {    
-    fastIO;
     cout<<"Enter the number of variables: ";
     int n;cin>>n;
     double coffecients[n][n];
