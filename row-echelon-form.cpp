@@ -29,14 +29,6 @@ int main()
             }
         }
     }
-    for(int i=1;i<=n;i++)
-    {
-        for(int j=1;j<=n+1;j++)
-        {
-            cout<<a[i][j]<<" ";
-        }
-        cout<<"\n";
-    }
     // Back Substitution Method //
     X[n] = a[n][n+1]/a[n][n]; 
     for(int i=n-1;i>=1;i--)
@@ -47,6 +39,25 @@ int main()
             X[i] = X[i] - a[i][j]*X[j];
         }
         X[i] = X[i]/a[i][i];
+    }
+
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=n+1;j++)
+        {
+            // cout<<a[i][j]<<" ";
+            a[i][j]=a[i][j]/a[i][i];
+        }
+        cout<<"\n";
+    }
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=n+1;j++)
+        {
+            cout<<a[i][j]<<" ";
+            //a[i][j]=a[i][j]/a[i][i];
+        }
+        cout<<"\n";
     }
 
     for(int i=1;i<=n;i++)
